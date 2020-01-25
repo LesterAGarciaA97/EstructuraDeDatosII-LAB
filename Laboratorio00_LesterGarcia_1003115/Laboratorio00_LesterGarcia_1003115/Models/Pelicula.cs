@@ -16,7 +16,7 @@ namespace Laboratorio00_LesterGarcia_1003115.Models
         public int value;
         public bool isChecked;
         public List<int> numbers = new List<int>();
-        public List<WeatherForecast> weatherForecasts = new List<WeatherForecast>();
+        public List<Pelicula> weatherForecasts = new List<Pelicula>();
 
         private static Pelicula instancia = null;
         public static Pelicula Instance

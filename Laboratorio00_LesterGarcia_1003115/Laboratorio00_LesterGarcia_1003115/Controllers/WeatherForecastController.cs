@@ -20,8 +20,8 @@ namespace Laboratorio00_LesterGarcia_1003115.Controllers
         }*/
 
         [HttpGet]
-        [Route("{id?}")]
-        public IEnumerable<WeatherForecast> Get(int id = -1)
+        //[Route("{id?}")]
+        public List<Pelicula> Get(Pelicula peli)
         {
             /*var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -32,20 +32,20 @@ namespace Laboratorio00_LesterGarcia_1003115.Controllers
             })
             .ToArray();*/
 
-            if (id > -1)
+            if (peli.numero > -1)
             {
-                return id > Pelicula.Instance.numbers.Count
-                    ? new List<WeatherForecast>()
-                    : new List<WeatherForecast>() { Pelicula.Instance.weatherForecasts[id] };
+                return peli.numero > Pelicula.Instance.numbers.Count
+                    ? new List<Pelicula>()
+                    : new List<Pelicula>() { Pelicula.Instance.weatherForecasts[peli.numero] };
             }
             return Pelicula.Instance.weatherForecasts;
         }
 
         [HttpPost]
-        public WeatherForecast Agregar([FromBody]WeatherForecast weatherForecast)
+        public Pelicula Agregar([FromBody]Pelicula pelicula)
         {
-            Pelicula.Instance.weatherForecasts.Add(weatherForecast);
-            return weatherForecast;
+            Pelicula.Instance.weatherForecasts.Add(pelicula);
+            return pelicula;
         }
     }
 }

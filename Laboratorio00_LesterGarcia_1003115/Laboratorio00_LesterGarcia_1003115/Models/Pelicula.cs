@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Laboratorio00_LesterGarcia_1003115.Models
 {
@@ -12,5 +9,23 @@ namespace Laboratorio00_LesterGarcia_1003115.Models
         public string nombre { get; set; }
         public int anio { get; set; }
         public string director { get; set; }
+
+
+        //---------------------------------------------------------------------------------------------
+        public string name;
+        public int value;
+        public bool isChecked;
+        public List<int> numbers = new List<int>();
+        public List<WeatherForecast> weatherForecasts = new List<WeatherForecast>();
+
+        private static Pelicula instancia = null;
+        public static Pelicula Instance
+        {
+            get
+            {
+                if (instancia == null) instancia = new Pelicula();
+                return instancia;
+            }
+        }
     }
 }

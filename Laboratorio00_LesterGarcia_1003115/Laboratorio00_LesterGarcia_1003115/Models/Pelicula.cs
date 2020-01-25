@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Laboratorio00_LesterGarcia_1003115.Models
+﻿namespace Laboratorio00_LesterGarcia_1003115.Models
 {
     public class Pelicula
     {

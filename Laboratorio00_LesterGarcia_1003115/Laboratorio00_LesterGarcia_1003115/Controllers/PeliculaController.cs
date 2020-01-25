@@ -1,16 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Linq;
 using Laboratorio00_LesterGarcia_1003115.Models; //Necesario para creación de objetos
 
 namespace Laboratorio00_LesterGarcia_1003115.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class PeliculaController : ControllerBase
     {
-        //GET --> api/Pelicula --> Ruta
+        //GET --> /Pelicula --> Ruta
         [HttpGet]
         public List<Pelicula> Mostrar()
         {
@@ -43,7 +42,7 @@ namespace Laboratorio00_LesterGarcia_1003115.Controllers
             }
             return listaPeliculas;
         }
-        //POST --> api/Pelicula --> Ruta
+        //POST --> /Pelicula --> Ruta
         [HttpPost]
         public Pelicula Obtener([FromBody] Pelicula peliculaIngresada)
         {

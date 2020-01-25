@@ -15,10 +15,8 @@ namespace Laboratorio00_LesterGarcia_1003115
         {
             CreateHostBuilder(args).Build().Run();
         }
-
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+            Host.CreateDefaultBuilder(args).ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
                 });

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using Laboratorio00_LesterGarcia_1003115.Models; //Necesario para creación de objetos de modelo específico
+using Laboratorio00_LesterGarcia_1003115.Modelos; //Necesario para creación de objetos de modelo específico
 
 namespace Laboratorio00_LesterGarcia_1003115.Controllers
 {
@@ -14,29 +14,29 @@ namespace Laboratorio00_LesterGarcia_1003115.Controllers
         public List<Pelicula> Mostrar()
         {
             List<Pelicula> listaPeliculas = new List<Pelicula>();
-            int contadorPeliculas = dataPersistence.instanciaNuevaPelicula.listadoPeliculas.Count;
+            int contadorPeliculas = persistenciaDatos.instanciaNuevaPelicula.listadoPeliculas.Count;
             if (contadorPeliculas > 0)
             {
                 if (contadorPeliculas < 10)
                 {
                     for (int i = 0; i < contadorPeliculas; i++)
                     {
-                        listaPeliculas.Add(dataPersistence.instanciaNuevaPelicula.listadoPeliculas.Pop());
+                        listaPeliculas.Add(persistenciaDatos.instanciaNuevaPelicula.listadoPeliculas.Pop());
                     }
                     for (int i = contadorPeliculas - 1; i >= 10; i--)
                     {
-                        dataPersistence.instanciaNuevaPelicula.listadoPeliculas.Push(listaPeliculas[i]);
+                        persistenciaDatos.instanciaNuevaPelicula.listadoPeliculas.Push(listaPeliculas[i]);
                     }
                 }
                 else
                 {
                     for (int i = 0; i < 10; i++)
                     {
-                        listaPeliculas.Add(dataPersistence.instanciaNuevaPelicula.listadoPeliculas.Pop());
+                        listaPeliculas.Add(persistenciaDatos.instanciaNuevaPelicula.listadoPeliculas.Pop());
                     }
                     for (int i = 9; i >= 0; i--)
                     {
-                        dataPersistence.instanciaNuevaPelicula.listadoPeliculas.Push(listaPeliculas[i]);
+                        persistenciaDatos.instanciaNuevaPelicula.listadoPeliculas.Push(listaPeliculas[i]);
                     }
                 }
             }
@@ -48,10 +48,10 @@ namespace Laboratorio00_LesterGarcia_1003115.Controllers
         {
             if (peliculaIngresada.id  == 0)
             {
-                peliculaIngresada.id = dataPersistence.instanciaNuevaPelicula.listadoPeliculas.Count() + 1;
-                dataPersistence.instanciaNuevaPelicula.listadoPeliculas.Push(peliculaIngresada);
+                peliculaIngresada.id = persistenciaDatos.instanciaNuevaPelicula.listadoPeliculas.Count() + 1;
+                persistenciaDatos.instanciaNuevaPelicula.listadoPeliculas.Push(peliculaIngresada);
             }
-            return dataPersistence.instanciaNuevaPelicula.listadoPeliculas.Peek();
+            return persistenciaDatos.instanciaNuevaPelicula.listadoPeliculas.Peek();
         }
     }
 }

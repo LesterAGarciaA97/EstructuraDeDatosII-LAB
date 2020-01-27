@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Laboratorio00_LesterGarcia_1003115.Modelos
+namespace Laboratorio00_LesterGarcia_1003115.Models
 {
     public class Pelicula
     {
@@ -24,14 +24,13 @@ namespace Laboratorio00_LesterGarcia_1003115.Modelos
                 }
             }
         }
-        //Se inicaliza una lista con un solo dato en ella para luego ser ingresada en una pila
-        private static Pelicula[] listaPeliculas =
+        //Se inicaliza con un solo dato en ella para luego ser ingresada en una pila
+        private static Pelicula[] arregloPeliculas =
         {
-            new Pelicula {id = 1, director ="Joe Johnston", nombre = "Hulk", anio = 2003},
-            new Pelicula {id = 2, director = "Cristopher Nolan", nombre = "Batman", anio = 2010 }
+            new Pelicula {id = 0, director ="Joe Johnston", nombre = "Hulk", anio = 2003}
 
         };
         //Como es una pila temporal, se necesita por lo menos un objeto en posición para evitar error de "Empty Stack"
-        public Stack<Pelicula> listadoPeliculas = new Stack<Pelicula>(listaPeliculas);
+        public Stack<Pelicula> pilaPeliculas = new Stack<Pelicula>(arregloPeliculas);
     }
 }

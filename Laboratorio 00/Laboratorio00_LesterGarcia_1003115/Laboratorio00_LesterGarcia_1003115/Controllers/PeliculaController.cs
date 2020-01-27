@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using Laboratorio00_LesterGarcia_1003115.Models; //Necesario para creación de objetos de modelo específico
+using Laboratorio00_LesterGarcia_1003115.Models;
 
 namespace Laboratorio00_LesterGarcia_1003115.Controllers
 {

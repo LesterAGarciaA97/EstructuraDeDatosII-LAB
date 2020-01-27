@@ -1,0 +1,76 @@
+{
+"numero": 0,
+"nombre": "Jurassic Park",
+"anio": 1993,
+"director": "Steven Spielberg"	
+}
+
+{
+"numero": 1,
+"nombre": "The shack",
+"anio": 2017,
+"director": "Stuart Hazeldine"	
+}
+
+{
+"numero": 2,
+"nombre": "Jurassic Park",
+"anio": 1993,
+"director": "Steven Spielberg"	
+}
+
+{
+"numero": 3,
+"nombre": "The social network",
+"anio": 2010,
+"director": "David Fincher"	
+}
+
+{
+"numero": 4,
+"nombre": "The Conjuring",
+"anio": 2013,
+"director": "James Wan"	
+}
+
+{
+"numero": 5,
+"nombre": "The Nun",
+"anio": 2016,
+"director": "Corin Hardy"	
+}
+
+{
+"numero": 6,
+"nombre": "Men in Black",
+"anio": 1997,
+"director": "Barry Sonnenfeld"	
+}
+
+{
+"numero": 7,
+"nombre": "The pursuit of happyness",
+"anio": 2006,
+"director": "Gabriele Muccino"	
+}
+
+{
+"numero": 8,
+"nombre": "Madagascar",
+"anio": 2005,
+"director": "Eric Darnell & Tom McGrath"	
+}
+
+{
+"numero": 9,
+"nombre": "Jurassic world",
+"anio": 2015,
+"director": "Colin Trevorrow"	
+}
+
+{
+"numero": 10,
+"nombre": "In time",
+"anio": 2011,
+"director": "Andrew Niccol"	
+}

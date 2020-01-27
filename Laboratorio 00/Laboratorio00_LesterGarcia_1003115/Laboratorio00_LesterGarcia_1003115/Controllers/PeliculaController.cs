@@ -6,7 +6,7 @@ using Laboratorio00_LesterGarcia_1003115.Models; //Necesario para creación de o
 namespace Laboratorio00_LesterGarcia_1003115.Controllers
 {
     [Route("[controller]")]
-    //[ApiController]
+    [ApiController]
     public class PeliculaController : ControllerBase
     {
         //GET --> /Pelicula --> Ruta
@@ -46,7 +46,7 @@ namespace Laboratorio00_LesterGarcia_1003115.Controllers
         [HttpPost]
         public Pelicula Obtener([FromBody] Pelicula peliculaIngresada)
         {
-            if (peliculaIngresada.id == 0)
+            if (peliculaIngresada.id  == 0)
             {
                 peliculaIngresada.id = dataPersistence.instanciaNuevaPelicula.listadoPeliculas.Count() + 1;
                 dataPersistence.instanciaNuevaPelicula.listadoPeliculas.Push(peliculaIngresada);

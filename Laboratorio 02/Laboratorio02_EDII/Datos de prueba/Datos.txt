@@ -1,0 +1,70 @@
+{
+     "Nombre": "Pepsi",
+     "Sabor": "Cola",
+     "Volumen": "3.3 Litros",
+     "Precio": "Q.15",
+     "casaProductora": "Pepsi"
+}
+
+
+{
+     "Nombre": "7Up",
+     "Sabor": "Cola",
+     "Volumen": "1.5 Litros",
+     "Precio": "Q.12.50",
+     "casaProductora": "Pepsi"
+}
+
+
+{
+     "Nombre": "Mirinda",
+     "Sabor": "Cola",
+     "Volumen": "2.5 Litros",
+     "Precio": "Q.10",
+     "casaProductora": "Pepsi"
+}
+
+
+{
+     "Nombre": "Pepsi Ligth",
+     "Sabor": "Cola",
+     "Volumen": "3 Litros",
+     "Precio": "Q.17",
+     "casaProductora": "Pepsi"
+}
+
+
+{
+     "Nombre": "Coca-Cola",
+     "Sabor": "Cola",
+     "Volumen": "3 Litros",
+     "Precio": "Q.15",
+     "casaProductora": "Coca-Cola"
+}
+
+
+{
+     "Nombre": "Sprite",
+     "Sabor": "Cola",
+     "Volumen": "2.5 Litros",
+     "Precio": "Q.11",
+     "casaProductora": "Coca-Cola"
+}
+
+
+{
+     "Nombre": "Fanta",
+     "Sabor": "Cola",
+     "Volumen": "2 Litros",
+     "Precio": "Q.10",
+     "casaProductora": "Coca-Cola"
+}
+
+
+{
+     "Nombre": "Coca-Cola Ligth",
+     "Sabor": "Cola",
+     "Volumen": "1.5 Litros",
+     "Precio": "Q.9",
+     "casaProductora": "Coca-Cola"
+}

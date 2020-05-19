@@ -1,0 +1,227 @@
+//Laboratorio 0
+//Primera Parte 
+Ruta :(/api)
+Solicitud : HttpPost
+Datos Requeridos:
+JsonFile -->
+{
+	"Name_Movie": "Saving Private Ryan",
+        "Year_Movie": "1999",
+        "Director_Movie": "Steven Spielber",
+}
+//Segunda Parte
+Ruta :(/api)
+Solicitud : HttpGet
+Datos Requeridos : (Unicamente se envia la peticion que devolvera los 10 ultimos datos
+ ingresados).
+
+##########################################################################################
+
+//Laboratorio 1
+//Primera Parte
+Ruta : (api/getPublicKey)
+Solicitud : HttpPost
+Datos Requeridos :
+	Rnd_ab : numero para realizar llave con Diffie-Hellman
+	p : Numero Primo Para realizar RSA
+	q : Numero Primo Para realizar RSA
+
+Datos Resultantes : 
+	3 Archivos en la ruta wwwroot\CipherKeys: 
+	1. Llave Diffie Hellman
+ 	2. Llave Private RSA
+	3. Llave Publica RSA
+
+//Segunda Parte
+Ruta : (api/ceaser2)
+Solicitud : HttpPost
+Datos Requeridos :
+	ArchivoEntrada : Archivo que sera Cifrado(Texto)
+	ArchivoLlaves : Archivo contenedor de la Llave Publica RSA
+	n : Corrimiento para realizar cifrado con ceaser
+
+Datos Resultantes :
+	2 Archivos en la ruta wwwroot\ArchivosCifradosCeaser2:
+	1. llave de corrimiento cifrada con RSA
+	2. Archivo Cifrado resultante de Ceaser
+
+##########################################################################################
+
+//Laboratorio 2(se debe realizar en el mismo momento)
+//Primera Parte
+Ruta : (api/compressHuffman)
+Solicitud : HttpPost
+Datos Requeridos : 
+	ArchivoComprimir : Archivo que sera compreso por completo
+	NuevoNombre : Nuevo nombre que tendra el archivo Compreso
+
+Datos Resultantes:
+	1 Archivo en la ruta wwwroot\ArchivosCompresosHuffman
+	1. Archivo Compreso con el NuevoNombre.huff
+
+//Segunda Parte
+Ruta : (api/decompressHuffman)
+Solicitud : HttpPost
+Datos Requeridos:
+	_ArchivoHUFF : Archivo a descomprimir con la extension .Huff
+
+Datos Resultantes;
+	1 Archivo en la ruta wwwroot\ArchivosDecompresosHuffman	
+	1.Archivo Descompreso con el nombre anterior que tenia
+ 
+//Tercera Parte
+Ruta : (api/CompressionsHuffman)
+Solicitud : HttpPost
+Datos Requeridos : (Unicamente se envia la peticion)
+
+Datos Resultantes:
+	1 Archivo en la ruta wwwroot\Compressions
+	1.Archivo contenedor de los resultados Razon,Factor,Porcentaje,Nombre Archivo cifrado, ruta archivo cifrado, Nombre anterior
+
+##########################################################################################
+
+//Laboratorio 3(se debe realizar en el mismo momento)
+//Primera Parte
+Ruta : (api/CompressLzw)
+Solicitud : HttpPost
+Datos Requeridos : 
+	ArchivoEntrada : Archivo que sera compreso atraves de Lzw
+	NuevoNombre : Nuevo nombre del archivo Resultante con extension .Lzw
+
+Datos Resultantes : 
+	1 Archivo en la ruta wwwroot\ArchivosCompresosLZW
+	1. Archivo Compreso con el nuevo nombre y la extension .lzw
+
+//Segunda Parte
+Ruta : (api/DecompressLzw)
+Solicitud : HttpPost
+Datos Requeridos :
+	_ArchivoLZW : Archivo compreso con anterioridad con el algoritmo LZW
+
+Datos Resultantes : 
+	1 Archivo en la ruta wwwroot\ArchivosDecompresosLZW
+	1. Archivo decompreso con el algoritmo y con el nombre que tenia anteriormente
+
+//Tercera Parte 
+Ruta : (api/CompressionsLzw)
+Solicitud : HttpPost
+Datos Requeridos : (Unicamente se envia la peticion)
+
+Datos Resultantes : 
+	1 Archivo en la ruta wwwroot\Compressions
+	1. Archivo contenedor de los resultados Razon,Factor,Porcentaje,Nombre Archivo cifrado, ruta archivo cifrado, Nombre anterior
+
+##########################################################################################
+
+//Laboratorio 4 
+//Primera Parte CIFRAR(api/cipher/{cifrado})
+
+//CEASER
+Ruta : (api/cipher/ceaser)
+Solicitud : HttpPost
+Datos Requeridos : 
+	ArchivoCargado : Archivo que se desea ser cifrado con Ceaser
+	Llave : Clave que sera utilizada para realizar el cifrado
+	NuevoNombre : nuevo nombre que tendra el archivo compreso con ceaser
+
+Datos Resultantes : 
+	1 Archivo en la ruta wwwroot\ArchivoCifradoCeaser
+	1. Archivo que contendra el cifrado resultante de ceaser
+ 
+//ZIGZAG
+Ruta : (api/cipher/zigzag)
+Solicitud : HttpPost
+Datos Requeridos : 
+	ArchivoCargado : Archivo que se desea ser cifrado con zigzag
+	TamanoCarriles: Tamaño de los carriles que sera utilizada para realizar el cifrado
+	NuevoNombre : nuevo nombre que tendra el archivo compreso con zigzag
+
+Datos Resultantes : 
+	1 Archivo en la ruta wwwroot\ArchivoCifradoZigZag
+	1. Archivo que contendra el cifrado resultante de zigzag
+ 
+//ESPIRAL
+Ruta : (api/cipher/Espiral)
+Solicitud : HttpPost
+Datos Requeridos : 
+	ArchivoCargado : Archivo que se desea ser cifrado con cifrado ruta Espira
+	n : numero de filas de la matriz a construir
+	m : numero de columnas de la matriz a construir
+	NuevoNombre : nuevo nombre que tendra el archivo compreso con ruta espiral
+
+Datos Resultantes : 
+	1 Archivo en la ruta wwwroot\ArchivoCifradoEspiral
+	1. Archivo que contendra el cifrado resultante de ruta vertical
+
+//VERTICAL
+Ruta : (api/cipher/vertical)
+Solicitud : HttpPost
+Datos Requeridos : 
+	ArchivoCargado : Archivo que se desea ser cifrado con cifrado ruta Vertical
+	n : numero de filas de la matriz a construir
+	m : numero de columnas de la matriz a construir
+	NuevoNombre : nuevo nombre que tendra el archivo compreso con ruta vertical
+
+Datos Resultantes : 
+	1 Archivo en la ruta wwwroot\ArchivoCifradoVertical
+	1. Archivo que contendra el cifrado resultante de ruta vertical
+
+
+ 
+//Primera Parte DECIFRAR(api/decipher/{decifrado})
+//CEASAR
+Ruta : (api/decipher/ceaser)
+Solicitud : HttpPost
+Datos Requeridos :
+	ArchivoCargado : Archivo que se desea decifrar, que fue cifrado con el metodo con anterioridad
+	Llave : Llave que se utilizara para decifrar el archivo
+	NuevoNombre : Nombre del archivo decifrado resultante
+
+Datos Resultantes:
+	1 Archivo en la ruta wwwroot\ArchivoDecifradoCeaser
+	1. Archivo que contendra el decifrado resultante de ceaser
+
+//ZIGZAG
+Ruta : (api/decipher/zigzag)
+Solicitud : HttpPost
+Datos Requeridos :
+	ArchivoCargado : Archivo que se desea decifrar, que fue cifrado con el metodo con anterioridad
+	TamañoCarriles : tamaño de los carriles para realizar el decifrado
+	NuevoNombre : Nombre del archivo decifrado resultante
+
+Datos Resultantes:
+	1 Archivo en la ruta wwwroot\ArchivoDecifradoZigZag
+	1. Archivo que contendra el decifrado resultante de ZigZag
+
+//ESPIRAL
+Ruta : (api/decipher/espiral)
+Solicitud : HttpPost
+Datos Requeridos :
+	ArchivoCargado : Archivo que se desea decifrar, que fue cifrado con el metodo con anterioridad
+	n : Tamaño de las filas de la matriz que se construira
+	m : tamaño de las columnas de la matriz que se construira
+	NuevoNombre : Nombre del archivo decifrado resultante
+
+Datos Resultantes:
+	1 Archivo en la ruta wwwroot\ArchivoDecifradoEspiral
+	1. Archivo que contendra el decifrado resultante de Espiral
+
+//VERTICAL
+Ruta : (api/decipher/espiral)
+Solicitud : HttpPost
+Datos Requeridos :
+	ArchivoCargado : Archivo que se desea decifrar, que fue cifrado con el metodo con anterioridad
+	n : Tamaño de las filas de la matriz que se construira
+	m : tamaño de las columnas de la matriz que se construira
+	NuevoNombre : Nombre del archivo decifrado resultante
+
+Datos Resultantes:
+	1 Archivo en la ruta wwwroot\ArchivoDecifradoVertical
+	1. Archivo que contendra el decifrado resultante de Vertical
+
+
+
+
+
+
+

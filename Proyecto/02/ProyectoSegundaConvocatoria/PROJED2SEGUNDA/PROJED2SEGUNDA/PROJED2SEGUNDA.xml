@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PROJED2SEGUNDA</name>
+    </assembly>
+    <members>
+        <member name="M:PROJED2SEGUNDA.Class.MetodosNecesarios.InsertarSucursal(PROJED2SEGUNDA.Models.Sucursal)">
+            <summary>
+            Metodo que ingresa nueva sucursal al arbol sucursales
+            </summary>
+            <param name="_NuevaSucursal">Nueva Sucursal a ser agregada</param>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Class.MetodosNecesarios.InsertarProducto(PROJED2SEGUNDA.Models.Producto)">
+            <summary>
+            Metodo para agregar un nuevo producto dentro del arbol de productos.
+            </summary>
+            <param name="_NuevoProducto">Nuevo producto a ser agregado</param>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Class.MetodosNecesarios.InsertarSucursal_Producto(PROJED2SEGUNDA.Models.Sucursal_Producto)">
+            <summary>
+            Metodo para agregar una nueva Sucursal_Producto dentro del arbol de Sucursal_Producto
+            </summary>
+            <param name="_NuevaSucursal_Producto">Nueva Sucursal_Producto a ser agregado</param>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Class.MetodosNecesarios.LecturaSucursales">
+            <summary>
+            Lectura de sucursales del .csv
+            </summary>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Class.MetodosNecesarios.LecturaProductos">
+            <summary>
+            Lectura de Productos del .csv
+            </summary>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Class.MetodosNecesarios.LecturaSucursal_Producto">
+            <summary>
+            Lectura de la Sucursal_Producto del .csv
+            </summary>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Class.MetodosNecesarios.ActualizarSucursal(PROJED2SEGUNDA.Models.Sucursal)">
+            <summary>
+            Actualizar los datos de una Sucursal
+            </summary>
+            <param name="_SucursalActualizada">Nuevos datos de la sucursal</param>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Class.MetodosNecesarios.ActualizarProducto(PROJED2SEGUNDA.Models.Producto)">
+            <summary>
+            Actualizar los datos de un producto
+            </summary>
+            <param name="_ProductoActualizada">Nuevos datos del producto</param>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Class.MetodosNecesarios.ActualizarSucursal_Producto(PROJED2SEGUNDA.Models.Sucursal_Producto)">
+            <summary>
+            Actualizar los datos de inventario del Sucursal_Producto
+            </summary>
+            <param name="_SucursalProductoActualizada">Nuevos datos de invetario de la Sucursal_Producto</param>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Controllers.ApiController.Get">
+            <summary>
+            Metodo donde se cargan los achivos .csv al inicio
+            </summary>
+            <returns>Mensaje de lectura exitosa</returns>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Controllers.ApiController.AgregarSucursal(PROJED2SEGUNDA.Models.Sucursal)">
+            <summary>
+            Metodo para agregar nueva sucursal 
+            </summary>
+            <param name="_NSucursal"></param>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Controllers.ApiController.AgregarProducto(PROJED2SEGUNDA.Models.Producto)">
+            <summary>
+            Metodo para agregar nuevo producto
+            </summary>
+            <param name="_NProducto">Nuevo Producto</param>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Controllers.ApiController.AgregarSucursalProducto(PROJED2SEGUNDA.Models.Sucursal_Producto)">
+            <summary>
+            Metodo para agregar nueva Sucursal_Producto
+            </summary>
+            <param name="_NSucursalProducto"></param>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Controllers.ApiController.ActualizarSucursal(PROJED2SEGUNDA.Models.Sucursal)">
+            <summary>
+            Metodo que realiza la actualizacion de alguna sucursal en especifico
+            </summary>
+            <param name="_SucursalActualizada"></param>
+            <returns>Mensaje de exito o No Exito con su razon</returns>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Controllers.ApiController.ActualizarProducto(PROJED2SEGUNDA.Models.Producto)">
+            <summary>
+            Metodo que realiza la actualizacion de algun producto en especifico
+            </summary>
+            <param name="_ProductoActualizado"></param>
+            <returns>Mensaje de exito o No Exito con su razon</returns>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Controllers.ApiController.ActualizarSucursalProducto(PROJED2SEGUNDA.Models.Sucursal_Producto)">
+            <summary>
+            Metodo que realiza la actualizacion de Sucursal_Producto en especifico
+            </summary>
+            <param name="_SucursalProductoActualizada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Controllers.ApiController.MostrarProductos">
+            <summary>
+            Metodo que retorna todos los datos de productos
+            </summary>
+            <returns>Lista de productos</returns>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Controllers.ApiController.MostrarSucursales">
+            <summary>
+            Metodo que retorna todos los datos de las sucursales 
+            </summary>
+            <returns>Lista de sucursales</returns>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Controllers.ApiController.MostrarSucursalProducto">
+            <summary>
+            Metodos que retorna todos los datos de las Sucursales_Productos
+            </summary>
+            <returns>Lista de Sucursales_Productos</returns>
+        </member>
+        <member name="M:PROJED2SEGUNDA.Controllers.ApiController.TransporteDeDatos(System.Int32)">
+            <summary>
+            Metodo que retorna un archivo descargable con los archivos cifrados listos para ser enviados a otro destino
+            </summary>
+            <param name="clave"></param>
+            <returns>retornara un archivo .zip que contiene los archivos .huff resultantes de la compresion de huffman</returns>
+        </member>
+    </members>
+</doc>
